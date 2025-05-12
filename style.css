@@ -257,6 +257,67 @@ section {
     text-shadow: var(--default-shadow);
 }
 footer{
+    background-color: var(--primary-color);
     height: 526px;
-    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+.contatos-container {
+    display: flex;
+    gap: 32px;
+    flex-grow: 1;
+    width: 70%;
+    justify-content: space-between;
+}
+.contatos-item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 120px;
+    gap: 24px;
+}
+.contatos-item.logo {
+    justify-content: center;
+    padding: 0;
+}
+.contatos-item h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.contatos-item menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+.contatos-item li {
+    display: flex;
+    gap: 16px;
+}
+.contatos-item.social a {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    transition: 0.5;
+}
+.social a:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+.creditos {
+    height: 72px;
+    border-top: 1px solid var(--secundary-color);
+    width: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 0.7rem;
+    font-weight: 300;
+    font-style: italic;
 }
