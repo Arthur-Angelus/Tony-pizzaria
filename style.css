@@ -7,12 +7,13 @@ a{
     text-decoration: none;
     color: inherit;
 }
-ul, ol, li{
+ul,ol,li{
     list-style: none;
 }
+
 :root{
-    --primary-color:#F07807;
-    --secundary-color: #FBDDC1;
+    --primary-color: #F07807;
+    --secundary-color: #FEF2E7;
     --default-shadow: 0 4px 4px #0004;
     --default-padding: 0px 80px;
 }
@@ -25,22 +26,22 @@ body{
     font-family: "Poppins", sans-serif;
     background-color: var(--secundary-color);
 }
+
 header{
     height: 60px;
     width: 100%;
     position: fixed;
-    top: 60px;
-    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    top: 60px;
     padding: var(--default-padding);
-    z-index: 999;
     background-color: #fff5;
+    z-index: 999;
 }
-header menu{
+header menu {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     gap: 48px;
 }
@@ -49,8 +50,10 @@ header li{
     transition: .5s;
 }
 header li:hover{
-    color: var(--primary-color);
+    background-color: var(--secundary-color);
+    box-shadow: var(--default-shadow);
 }
+
 header button{
     height: 48px;
     width: 120px;
@@ -60,11 +63,10 @@ header button{
     box-shadow: var(--default-shadow);
     display: flex;
     justify-content: center;
-    gap: 8px;
     align-items: center;
+    gap: 8px;
     font-weight: 800;
     color: var(--primary-color);
-
 }
 
 
@@ -84,43 +86,46 @@ section {
     display: flex;
     justify-content: center;
     align-items: end;
-    gap: 62px;
+    gap: 64px;
 }
 .hero h2{
-    font-size: 4rem;
     width: 558px;
+    font-size: 4rem;
     font-weight: 400;
     margin-bottom: 64px;
 }
-.hero span{
-    color: var(--primary-color);
+.hero span {
+    color: var(--primary-color)
 }
+
 .container-produtos {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .pizza {
+    position: relative;
     display: flex;
     border-radius: 12px;
-    position: relative;
 }
+
 .add-produto {
     position: absolute;
-    top: -16px;
-    right: -16px;
+    top: -18px;
+    right: -18px;
     display: grid;
     place-content: center;
-    font-size: 32px;
-    color: white;
     height: 40px;
     width: 40px;
+    font-size: 32px;
+    color: white;
     border-radius: 12px;
-    border: 3px solid white;
+    border: 4px solid white;
     background-color: var(--primary-color);
     opacity: 0;
     transition: .5s;
 }
+
 .pizza:hover .add-produto{
     opacity: 1;
 }
@@ -128,21 +133,22 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
+    bottom: 0;
     overflow: hidden;
     border-radius: 0 0 12px 12px;
 }
+
 .container-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 36px;
+    width: 100%;
+    padding: 0 12px;
     position: absolute;
     bottom: -36px;
     background-color: #0008;
-    width: 100%;
-    padding: 0 12px;
-    height: 36px;
     border-radius: 0 0 12px 12px;
     transition: .5s;
 }
@@ -150,11 +156,12 @@ section {
     bottom: 0;
 }
 .container-info p {
+    width: 120px;
     font-size: 12px;
     color: white;
-    width: 120px;
 }
-.container-info span {
+
+.container-info span{
     display: grid;
     place-content: center;
     width: 57px;
@@ -164,12 +171,13 @@ section {
     border-radius: 6px;
     background-color: var(--primary-color);
 }
+
 .cardapio {
     display: flex;
     flex-direction: column;
-    background-color: white
+    background-color: white;
 }
-.titulo-secao{
+.titulo-secao {
     display: flex;
     align-items: center;
     gap: 24px;
@@ -180,27 +188,31 @@ section {
     text-transform: uppercase;
     font-weight: 600;
 }
-.titulo-opcoes{
+.opcoes-cardapio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 300px;
+    border-bottom: 2px solid var(--secundary-color);
+}
+.titulo-opcoes {
     display: flex;
     justify-content: space-between;
     color: var(--primary-color);
 }
-.titulo-opcoes h4{
+.titulo-opcoes h4 {
     font-size: 1.5rem;
     font-weight: 600;
 }
-.titulo-opcoes a{
+.titulo-opcoes a {
     font-size: 1.5rem;
     font-weight: 600;
 }
-.opcoes-cardapio{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 250px;
-    border-bottom: 2px solid var(--secundary-color);
-    padding-bottom: 30px;
+
+.opcoes-cardapio.bebida {
+    border: none;
 }
+
 .pizza.bebida {
     display: flex;
     flex-direction: column;
@@ -210,30 +222,32 @@ section {
     padding: 16px;
     transition: .5s;
 }
-.pizza.bebida img {
-    height: 150px;
+.pizza.bebida:hover {
+    box-shadow: 2px 2px 8px #CCC;
 }
-.pizza.bebida:hover{
-    box-shadow: 2px 2px 8px #aaa;
-}
-.pizza.bebida .valor{
+
+.pizza.bebida .valor {
     color: var(--primary-color);
+    width: 100%;
 }
-.pizza.bebida .descricao{
+.pizza.bebida .descricao {
     font-size: 8px;
 }
+
 .servicos {
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 32px;
-    height: auto;
-    /*padding que altera top e bottom apenas*/
-    padding-block: 32px;
+    /* padding-block -> padding na parte de top e bottom */
+    padding-block: 32px; 
 }
+
 .opcoes-servicos {
     display: flex;
     justify-content: space-between;
 }
+
 .servico-card {
     width: 400px;
     height: 500px;
@@ -246,8 +260,8 @@ section {
     padding: 40px;
 }
 .servico-card img {
-    /*sombra para ignorar areas transparentes*/
-    filter: drop-shadow(2px 2px 4px #667);
+    /* Sombra para ignorar areas transparentes */
+    filter: drop-shadow(2px 2px 4px #666);
 }
 .servico-card h4 {
     font-size: 2.5rem;
@@ -260,6 +274,7 @@ section {
     font-size: 1.2rem;
     text-shadow: var(--default-shadow);
 }
+
 footer{
     background-color: var(--primary-color);
     height: 526px;
@@ -267,14 +282,14 @@ footer{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    color: #fff;
 }
 .contatos-container {
-    display: flex;
-    gap: 32px;
-    flex-grow: 1;
     width: 70%;
+    display: flex;
     justify-content: space-between;
+    flex-grow: 1;
+    gap: 32px;
 }
 .contatos-item {
     display: flex;
@@ -283,38 +298,46 @@ footer{
     padding-top: 120px;
     gap: 24px;
 }
+
 .contatos-item.logo {
     justify-content: center;
     padding: 0;
 }
+
 .contatos-item h4 {
     font-size: 1.5rem;
     font-weight: 500;
 }
-.contatos-item menu {
+.contatos-item menu{
     display: flex;
     flex-direction: column;
     gap: 16px;
     align-items: start;
+    font-weight: 300;
 }
-.contatos-item li {
+
+.contatos-item li{
     display: flex;
     gap: 16px;
 }
-.contatos-item.social a {
-    height: 50px;
+
+.social a {
     width: 50px;
+    height: 50px;
     border-radius: 50%;
-    border: 2px solid white;
+    border: 2px solid #fff;
     display: grid;
     place-content: center;
     font-size: 1.5rem;
-    transition: 0.5;
+    transition: 0.5s;
 }
+
 .social a:hover {
-    background-color: white;
+    background-color: var(--secundary-color);
     color: var(--primary-color);
 }
+
+
 .creditos {
     height: 72px;
     border-top: 1px solid var(--secundary-color);
@@ -325,7 +348,8 @@ footer{
     font-weight: 300;
     font-style: italic;
 }
-@media (max-width: 1024px){
+
+@media (max-width:1024px) {
     header {
         position: absolute;
         background-color: transparent;
@@ -333,20 +357,22 @@ footer{
         top: 48px;
     }
     header menu {
+        width: 100vw;
+        height: 64px;
         position: fixed;
         left: 0;
         bottom: 0;
         background-color: var(--primary-color);
-        width: 100vw;
-        height: 64px;
         z-index: 999;
-        color: white;
+        color: #fff;
         justify-content: space-evenly;
     }
-    header li:hover {
-        color: var(--primary-color)
+
+    header li:hover{
+        color: var(--primary-color);
     }
-    .home {
+
+    .home{
         grid-template-rows: none;
     }
     .hero {
@@ -357,5 +383,175 @@ footer{
     }
     .home .container-produtos {
         display: none;
+    }
+
+    .container-produtos {
+        gap: 32px;
+    }
+    .container-produtos .pizza {
+        width: 100%;
+    }
+    .container-produtos img{
+        width: 100%;
+    }
+
+    .container-produtos .pizza:nth-child(3),
+    .container-produtos .pizza:nth-child(4),
+    .container-produtos .pizza:nth-child(5)
+    {
+        display: none;
+    }
+
+    .cardapio {
+        justify-content: start;
+        gap: 24px;
+    }
+
+    .pizza.bebida {
+        width: 200px;
+        height: 300px;
+    }
+
+    .opcoes-servicos {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .servico-card {
+        width: 100%;
+        height: 260px;
+        flex-wrap: wrap;
+    }
+    .servico-card p {
+        width: 60%;
+    }
+
+    .contatos-container {
+        height: 400px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contatos-item {
+        padding: 0;
+    }
+
+    .contatos-item:nth-child(2) {
+        display: none;
+    }
+
+    .contatos-item.social {
+        align-items: end;
+    }
+
+    .creditos {
+        margin-bottom: 64px;
+    }
+}
+@media (max-width:768px){
+    header {
+        align-items: center;
+        justify-content: space-evenly;
+        position: absolute;
+        background-color: transparent;
+        padding: 0;
+    }
+    header menu {
+        width: 100vw;
+        height: 64px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background-color: var(--primary-color);
+        z-index: 999;
+        color: #fff;
+        justify-content: space-evenly;
+    }
+
+    header li:hover{
+        color: var(--primary-color);
+    }
+
+    .home{
+        grid-template-rows: none;
+        padding: 0;
+    }
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero h2 {
+        display: none;
+    }
+    .hero img {
+        display: none;
+    }
+    .home .container-produtos {
+        display: none;
+    }
+
+    .container-produtos {
+        gap: 32px;
+    }
+    .container-produtos .pizza {
+        width: 100%;
+    }
+    .container-produtos img{
+        width: 100%;
+    }
+
+    .container-produtos .pizza:nth-child(2),
+    .container-produtos .pizza:nth-child(3),
+    .container-produtos .pizza:nth-child(4),
+     .container-produtos .pizza:nth-child(4)
+    {
+        display: none;
+    }
+
+    .cardapio {
+        justify-content: start;
+        gap: 24px;
+        width: 100%;
+    }
+
+    .pizza.bebida {
+        width: 200px;
+        height: 300px;
+    }
+
+    .opcoes-servicos {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .servico-card {
+        width: 100%;
+        height: 260px;
+        flex-wrap: wrap;
+    }
+    .servico-card p {
+        display: none;
+    }
+    .contatos-container {
+        height: 400px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contatos-item {
+        padding: 0;
+    }
+
+    .contatos-item:nth-child(2) {
+        display: none;
+    }
+
+    .contatos-item.social {
+        align-items: end;
+    }
+
+    .creditos {
+        margin-bottom: 64px;
     }
 }
