@@ -450,41 +450,65 @@ footer{
 }
 @media (max-width:768px){
     header {
-        align-items: center;
-        justify-content: space-evenly;
-        position: absolute;
-        background-color: transparent;
+        justify-content: space-between;
+        left:12px;
+        top:16px;
         padding: 0;
+        width: 95%;
+ }
+ header img {
+    filter: brightness(0) invert(1);
+
+ }
+ header button img{
+    filter: none;
+ }
+ header menu{
+    width: 100vw; /*Vw é com base a altura da tela */
+    height: 64px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background-color: var(--primary-color);
+    z-index: 999;
+    color: #fff;
+    justify-content: space-evenly;
+    gap: 12px;
+    font-size: 16px;
+}
+section{
+    padding: 20px;
+}
+    .home {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        grid-template-rows: none;
+        height: 568px;
+        background-image: url(img/background-mobile.png);
+       background-size: 100%;
+       background-color: var(--primary-color);
+        opacity: 90%;
     }
-    header menu {
-        width: 100vw;
-        height: 64px;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        background-color: var(--primary-color);
-        z-index: 999;
-        color: #fff;
-        justify-content: space-evenly;
+    .hero {
+       padding: 0;
+       align-items: start;
+       justify-content: end;
+       gap: 0px;
+       
     }
 
-    header li:hover{
+    .hero h2 {
+        width: 100%;
+        font-size: 3.5rem;
+        color: white;
+    }
+    .hero span {
+        background-color: white;
         color: var(--primary-color);
     }
 
-    .home{
-        grid-template-rows: none;
-        padding: 0;
-    }
-    .hero {
-        flex-direction: column-reverse;
-        align-items: center;
-        justify-content: center;
-    }
-    .hero h2 {
-        display: none;
-    }
-    .hero img {
+    .hero img{
         display: none;
     }
     .home .container-produtos {
@@ -492,7 +516,10 @@ footer{
     }
 
     .container-produtos {
-        gap: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
     }
     .container-produtos .pizza {
         width: 100%;
@@ -500,55 +527,63 @@ footer{
     .container-produtos img{
         width: 100%;
     }
-
-    .container-produtos .pizza:nth-child(2),
-    .container-produtos .pizza:nth-child(3),
-    .container-produtos .pizza:nth-child(4),
-     .container-produtos .pizza:nth-child(4)
-    {
+    .container-produtos .pizza:nth-last-child(-n+3){
         display: none;
     }
 
+    .container-produtos .pizza.bebida:nth-last-child(-n+5){
+        display: none;
+        width: auto;
+    }
     .cardapio {
+        height: auto;
         justify-content: start;
-        gap: 24px;
-        width: 100%;
+        gap: 34px;
+        height: 1100px;
+        padding: 0;
+    }
+    .titulo-secao{
+        justify-content: center;
+    }
+    .titulo-opcoes{
+        justify-content: center; 
+    }
+    .titulo-opcoes a {
+        display: none;
     }
 
     .pizza.bebida {
-        width: 200px;
-        height: 300px;
-    }
+        width: 150px;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        align-items: center;
+        padding: 0;
 
+    }
     .opcoes-servicos {
         flex-direction: column;
         gap: 24px;
     }
     .servico-card {
-        width: 100%;
+        align-items: center;
         height: 260px;
+        flex-direction: column;
         flex-wrap: wrap;
+        align-items: center;
+        padding: 0;
     }
     .servico-card p {
         display: none;
     }
-    .contatos-container {
-        height: 400px;
-        flex-direction: column;
-        flex-wrap: wrap;
+    .cardapio h4{
         justify-content: center;
+        align-items: center;
     }
 
-    .contatos-item {
-        padding: 0;
-    }
-
-    .contatos-item:nth-child(2) {
-        display: none;
-    }
-
-    .contatos-item.social {
-        align-items: end;
+    .contatos-item.social menu {
+        flex-direction: row;
     }
 
     .creditos {
